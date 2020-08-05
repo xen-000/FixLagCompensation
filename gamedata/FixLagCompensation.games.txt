@@ -1,0 +1,104 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Offsets"
+		{
+			"IsMoving"
+			{
+				"windows"	"74"
+				"linux"		"75"
+			}
+		}
+
+		"Signatures"
+		{
+			"CLagCompensationManager::BacktrackPlayer"
+			{
+				"library"		"server"
+				"linux"			"@_ZN23CLagCompensationManager15BacktrackPlayerEP11CBasePlayerf"
+			}
+		}
+
+		"Functions"
+		{
+			"CLagCompensationManager__BacktrackPlayer"
+			{
+				"signature"		"CLagCompensationManager::BacktrackPlayer"
+				"callconv"		"thiscall"
+				"return"		"void"
+				"this"			"ignore"
+				"arguments"
+				{
+					"pPlayer"
+					{
+						"type"		"cbaseentity"
+					}
+					"flTargetTime"
+					{
+						"type"		"float"
+					}
+				}
+			}
+		}
+	}
+	"csgo"
+	{
+		"Offsets"
+		{
+			"IsMoving"
+			{
+				"windows"	"80"	// \x55\x8B\xEC\x83\xEC\x0C\x8B\x01\x8D\x55\xF4\x6A\x00
+				"linux"		"81"
+			}
+		}
+
+		"Signatures"
+		{
+			"CLagCompensationManager::BacktrackEntity"
+			{
+				"library"		"server"
+				"linux"			"\x55\x89\xE5\x57\x56\x53\x81\xEC\x6C\x01\x00\x00\x8B\x0D\x2A\x2A\x2A\x2A\x0F\xB6\x45\x20"
+				"windows"		"\x55\x8B\xEC\x83\xE4\xF8\x81\xEC\xC4\x00\x00\x00\x89\x4C\x24\x34"
+			}
+		}
+
+		"Functions"
+		{
+			"CLagCompensationManager__BacktrackEntity"
+			{
+				"signature"		"CLagCompensationManager::BacktrackEntity"
+				"callconv"		"thiscall"
+				"return"		"bool"
+				"this"			"ignore"
+				"arguments"
+				{
+					"entity"
+					{
+						"type"		"cbaseentity"
+					}
+					"flTargetTime"
+					{
+						"type"		"float"
+					}
+					"track"
+					{
+						"type"		"objectptr"
+					}
+					"restore"
+					{
+						"type"		"objectptr"
+					}
+					"change"
+					{
+						"type"		"objectptr"
+					}
+					"wantsAnims"
+					{
+						"type"		"bool"
+					}
+				}
+			}
+		}
+	}
+}
