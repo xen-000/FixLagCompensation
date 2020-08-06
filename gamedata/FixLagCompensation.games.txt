@@ -80,6 +80,10 @@
 					"flTargetTime"
 					{
 						"type"		"float"
+						"windows"
+						{
+							"register"	"xmm2"
+						}
 					}
 					"track"
 					{
