@@ -65,7 +65,7 @@ public void OnPluginStart()
 		delete hGameData;
 		SetFailState("PrepSDKCall_SetFromConf(hGameData, SDKConf_Virtual, \"IsMoving\") failed!");
 	}
-	PrepSDKCall_SetReturnInfo(SDKType_PlainOldData, SDKPass_Plain);
+	PrepSDKCall_SetReturnInfo(SDKType_Bool, SDKPass_Plain);
 	g_hIsMoving = EndPrepSDKCall();
 
 	delete hGameData;
